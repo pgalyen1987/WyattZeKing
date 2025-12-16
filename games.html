@@ -1,158 +1,102 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>President Pat 2024</title>
-    <link rel="icon" type="image/x-icon" href="images/flagicon.ico" />
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css' />
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+    <meta charset="UTF-8">
+    <title>Games | Big Lizard Games</title>
 
-    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <!-- Common Head -->
+    <div id="common-head"></div>
+
+    <!-- Styles -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#common-head').load('header.html');
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header id="navigation"></header>
     <script>
         $(document).ready(function () {
             $('#navigation').load('navbar.html');
-        });</script>
+        });
+    </script>
 
-    <div id="navigation"></div>
-
-    <div class="wrap">
-        <div class="leftcol">
-            <div class="search">
-                <div class="title">
-                    <h1>Site Search</h1>
-                    <div class="search-input"><input name="" type="text" class="input-style" /></div>
-                    <div class="search-btn"><img src="images/search-btn.jpg" alt="search" /></div>
-                </div>
+    <!-- Main Content -->
+    <main class="page-content">
+        <section class="panel mar-bottom">
+            <div class="hero">
+                <h1>All Games</h1>
             </div>
 
-            <div class="block">
-                <div class="panel">
-                    <div class="title">
-                        <h1></h1>
-                    </div>
-                    <div class="content">
-                        <img src="images/me1.jpeg" width=100% padding="5px 5px 5px 5px" />
-                    </div>
-                </div>
+            <!-- Games Container -->
+            <div class="games" id="games-container"></div>
+
+            <!-- More Games Link -->
+            <div class="more-games" style="text-align:center; margin: 50px 0;">
+                <a
+                    href="https://scratch.mit.edu/users/biglizard34444/projects/"
+                    target="_blank"
+                    class="btn-primary"
+                >
+                    See More Games on Scratch
+                </a>
             </div>
+        </section>
+    </main>
 
-            <div class="block2">
-                <div class="title"><h1></h1></div>
-                <div class="panel">
+    <!-- Footer -->
+    <footer class="footer-wrap">
+        <p>&copy; 2025 Big Lizard Games. All rights reserved.</p>
+    </footer>
 
-                    <di
-                </div>
-            </div>
-            <div class="panel">
+    <!-- Scripts -->
+    <script>
+        const games = [
+            {
+                title: "Sword Master 2 Demo",
+                embed: "https://scratch.mit.edu/projects/1068025190/embed"
+            },
+            {
+                title: "Saving Time for Me",
+                embed: "https://scratch.mit.edu/projects/1217453599/embed"
+            },
+            {
+                title: "Make A Soup",
+                embed: "https://scratch.mit.edu/projects/1018008491/embed"
+            },
+            {
+                title: "The Biglizard 2: The Dungen Demo",
+                embed: "https://scratch.mit.edu/projects/1042991539/embed"
+            }
+        ];
 
-                <div class="content">
+        const container = document.getElementById("games-container");
 
-                </div>
-            </div>
-            <div class="panel bor-bottm-non">
+        games.forEach(game => {
+            const gameCard = document.createElement("article");
+            gameCard.className = "game-card";
 
-                <div class="content">
+            gameCard.innerHTML = `
+                <h3>${game.title}</h3>
+                <iframe
+                    src="${game.embed}"
+                    allowtransparency="true"
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            `;
 
-                </div>
-            </div>
-        </div>
-    </div><!---leftcol--->
-
-
-    <div class="rightcol">
-        <div class="page-content">
-            <div class="panel mar-bottom">
-                <div class="title">
-                    <h1>All Games</h1>
-                    <br>
-                    <br>
-                    <h2>Make A Soup</h2>
-                    <br>
-                </div>
-                <div class="content">
-                    <iframe src="https://scratch.mit.edu/projects/1018008491/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                </div>
-                <br>
-                <br>
-                <h2>The Accident</h2>
-                <!-- Roblox Game Section -->
-                <section class="container mt-5" id="roblox-game">
-                    <div class="row justify-content-center">
-                    <div class="col-md-8">
-                    <h2>
-                    Play Roblox
-                    </h2>
-                    <div id="robloxGameContainer">
-                    </div>
-                    </div>
-                    </div>
-                </section>
-                <!-- Bootstrap & jQuery JS -->
-                <script src="js/jquery-3.7.1.min.js">
-                </script>
-                <script src="js/bootstrap.min.js">
-                </script>
-                <!-- Roblox Game JS -->
-                <script src="https://www.roblox.com/RobloxLauncher.js">
-                </script>
-
-            </div>
-            <div class="clearing"></div>
-        </div><!---page--->
-    </div><!---Rightcol--->
-    </div>
-    <div class="footer-wrap">
-        <div class="footer">
-            <div class="bolg">
-                <div class="title">
-                    <h1>From Our Blog</h1>
-                </div>
-                <div class="panel mar-right115">
-                    <div class="content">
-                        
-                    </div>
-                </div>
-
-                <div class="panel">
-                    <div class="content">
-                       
-                    </div>
-                </div>
-            </div>
-            <div class="quickcontact">
-                <div class="title">
-                    <h1>Quick Contact</h1>
-                </div>
-                <div class="panel">
-                    <div class="content">
-                        <ul>
-                        </ul>
-                        <ul>
-                            <a href="https://www.instagram.com/llcoolpat/?hl=en">
-                                <img src="images/instagramicon.jpg" alt="image" width="100px" />
-                            </a>
-                        </ul>
-                        <p>
-                            Following me on Facebook and Instagram to hear about my latest policies!
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!---footer--->
-    <div class="copyright-wrap">
-        <div class="copyright">
-            <div class="content">
-                <p>
-                    © 2012 All Rights Reserved  |  Privacy Policy
-                    Designed by :<a href=" www.alltemplateneeds.com." class="active"> www.alltemplateneeds.com.</a>
-                    Images From:<a href=" www.photorack.net"> www.photorack.net</a>
-                </p>
-            </div>
-        </div>
-    </div><!---copyright-wrap--->
+            container.appendChild(gameCard);
+        });
+    </script>
 </body>
 </html>

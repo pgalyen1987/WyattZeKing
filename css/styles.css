@@ -1,170 +1,369 @@
-/*-------------------------------------------------
-GLOBALS CLASSES 
--------------------------------------------------*/
-*{padding:0; margin:0;}
-body{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#ffffff;}
-img{border:none;}
-h1{ font-family: 'Droid Serif', serif; font-weight:normal; color:#fff;}
-h2{ font-family: 'Droid Serif', serif; font-weight:normal; color:#fff; font-size:18px;}
-P{ line-height:20px;}
-a{text-decoration:none; color:#1491c1;}
-a:hover{color:#fff;}
+/* ==============================
+   Big Lizard Games Stylesheet
+   Light Theme + Responsive Layout
+   ============================== */
 
-/*-------------------------------------------------
-GENERAL CLASSES
--------------------------------------------------*/
-.mar-top{ margin-top:40px;}
-.mar-top30{ margin-top:30px;}
-.mar-bottom{ margin-bottom:40px;}
-.mar-Right{ margin-right:40px;}
-.mar-right115{ margin-right:115px;}
-.float-left{ float:left;}
-.float-right{ float:right;}
-.clearing { clear:both;}
-.bor-bottm-non{border-bottom:none!important;}
-.panel{}
-.title{}
-.content{}
-.wrap{width:960px; margin:0 auto;overflow:hidden; background:url(../images/page-bg.jpg);}
-.page{ width:580px; margin:0 auto;overflow:hidden; padding-bottom:50px;}
-.page-content{ width:580px; margin:0 auto;overflow:hidden; padding-bottom:30px; padding-top:30px;}
-.block{padding:20px 20px 20px 20px; margin:0 auto;}
-.block2{padding:20px 20px 20px 20px; margin:0 auto;}
-.button a{text-decoration:none; display:block; width:70px; height:30px; background:#ffffff; color:#000000; font-family:Arial, Helvetica, sans-serif; line-height:30px; text-align:center;}
-.button a:hover{ background:#0e5295;}
+/* ------------------------------
+   Color Variables (Light Theme)
+------------------------------ */
+:root {
+    /* Backgrounds */
+    --bg-primary: #ddccac; /* site-wide background */
+    --bg-section: #f5f5f5;
 
-/*-------------------------------------------------
-CONTENT CLASSES
--------------------------------------------------*/
-.page-content{ width:580px; margin:0 auto;overflow:hidden; padding-bottom:30px; padding-top:30px;}
-.page-content .content h3{ padding-bottom:20px;font-family: 'Droid Serif', serif; font-weight:normal; color:#fff; font-size:16px;}
-.page-content .content p{ padding-bottom:15px;}
+    /* Text */
+    --text-primary: #111111;
+    --text-secondary: #333333;
 
-/*-------------------------------------------------
-HEADER CLASSES
--------------------------------------------------*/
-.header-wrap{ position:relative; float:left; background:#ffffff; width:100%; height:200px; padding: 15px 15px 15px 15px}
-.header{position:relative; float:left;  margin:0 auto;}
-.logo{ position:relative; background:#fafafa; width:400px; float:left}
-.logo h1{font-size:52px; text-align:center; padding:52px 0px 50px 0px;}
+    /* Accent */
+    --accent-color: #0077cc;
+    --accent-hover: #005fa3;
 
-.menu{position:relative;float:left}
-.menu ul li{ float:left; list-style:none; border-right:#ffffff solid 1px; padding:115px 20px 30px 20px;}
-.menu ul li a{ text-decoration:none; color:#80d2f8; font-size:24px; text-align:center;}
-.menu ul li a:hover{ color:#1491c1;}
-.menu ul li a.active{ color:#1491c1;}
+    /* Borders & shadows */
+    --border-color: #e0e0e0;
+    --box-shadow-light: rgba(0, 0, 0, 0.05);
+}
 
-/*-------------------------------------------------
-BANNER CLASSES
--------------------------------------------------*/
-.banner{ width:682px; height:1024px; overflow:hidden; margin-bottom:50px;}
-.banner img{ border:none;}
-
-
-/*-------------------------------------------------
-SEARCH CLASSES
--------------------------------------------------*/
-.search{ background:url(../images/search-bg.jpg) repeat-x center; width:260px; padding:18px 20px 25px 20px; margin-bottom:22px; overflow:hidden;}
-.search h1{ font-size:20px; padding-bottom:18px;}
-.search-input{ float:left;}
-.search-btn{ float:left;}
-.input-style{ background:#07366b; text-decoration:5px; font-family:Arial, Helvetica, sans-serif; color:#1491c1; font-size:13px; border:none; height:34px; width:219px;}
-
-/*-------------------------------------------------
-LEFTCOL CLASSES
--------------------------------------------------*/
-.leftcol{ float:left; width:300px; overflow:hidden;}
-.leftcol .title{ margin-bottom:25px;}
-.leftcol .content ul li{ list-style:none; border-bottom:#0c4680 solid 1px; line-height:40px;}
-.leftcol .content ul li a{ text-decoration:none; color:#1491c1;}
-.leftcol .content ul li a:hover{color:#80d2f8;}
-.leftcol .panel img{ float:left; border:#fff solid 4px; margin:9px 20px 0px 0px;}
-.leftcol .panel .content{ color:#1491c1; overflow:hidden;}
-.leftcol .panel .content .button a{ width:53px; height:24px; line-height:24px; float:left; margin:15px 0px 20px 0px;}
-.block2 .panel{border-bottom:#0c4680 solid 1px; margin-bottom:18px;}
- 
-/*-------------------------------------------------
-RIGHT CLASSES
--------------------------------------------------*/
-.rightcol{ float:left; width:660px; overflow:hidden;}
-.rightcol .title{ margin-bottom:25px;}
-.rightcol .button{ margin-top:0px;}
-.rightcol img{ float:left; margin-right:40px;}
-.rightcol .content p{ padding-bottom:30px;}
-.button2 a{text-decoration:none; display:block; width:70px; height:30px; background:#1491c1; color:#ffffff; font-family:Arial, Helvetica, sans-serif; line-height:30px; text-align:center; float:left;}
-.button2 a:hover{ background:#0e5295;}
-
-/*-------------------------------------------------
-SERVICES CLASSES
--------------------------------------------------*/
-.services .panel .content img{ float:left; margin-right:30px; background:#0d3d78; padding:5px;}
-
-/*-------------------------------------------------
-BOX CLASSES
--------------------------------------------------*/
-.box{ width:230px; background:#083266; padding:20px 20px 35px 20px; float:left;}
-.box img{ margin-bottom:25px;}
-.box .title{margin-bottom:20px;}
-.box .title h1{ font-size:20px; font-weight:normal;}
-
-/*-------------------------------------------------
-CONTACT FORM CLASSS
--------------------------------------------------*/
-
-.contact-form { background:#0d3d78; padding:30px; width:440px; float:left;}
-.contact-form label {display: block; padding:10px 0 10px 0;}
-.contact-form label span {display: block; color:#fff;font-size:14px; float:left; width:80px; text-align:left; padding:5px 20px 0 0; font-family: 'Droid Serif', serif;}
-.contact-form .input_text {padding:10px 10px;width:318px;background:#07366b; border:none; color:#fff; outline:none;}
-.contact-form .message{padding:10px 10px;width:318px; background:#07366b; border:none; overflow:hidden;height:150px; color:#fff; font-size:14px; outline:none;}
-.contact-form .button{padding:8px;background:#1491c1; color:#ffffff; text-transform:uppercase; font-family:'Oswald', sans-serif;border:0px solid;margin-left:100px;margin-top:20px;}
-
-.address { float:left; width:250px; margin-left:30px; margin-top:50px;}
-.address .panel { border:none; color:#fff;}
-.address .panel .title h1 {  color:#1491c1; padding-bottom:10px;}
-.address .panel .content p span { color:#fff;}
-.address .panel .content p .number{ font-size:15px;}
-
-
-
-/*-------------------------------------------------
-FOOTER CLASSES
--------------------------------------------------*/
-.footer-wrap{ background:#1491c1; overflow:hidden;}
-.footer{ width:960px; margin:0 auto; padding:40px 0px 50px 0px; overflow:hidden;}
-.footer .bolg{ width:598px; float:left;}
-.footer .panel{ float:left; width:230px;}
-.footer .title{ border-bottom:#107eb4 solid 1px; padding-bottom:20px; margin-bottom:30px;}
-.footer .title h1{ font-size:20px;}
-.footer .panel .content ul li{ float:left; list-style:none; color:#062c5b; font-weight:bold;}
-.footer .panel .content p{ color:#fff; font-size:12px; line-height:inherit; padding-top:20px; clear:both;}
-.footer .panel .content p a{color:#062c5b; text-decoration:none;}
-.footer .panel .content p a:hover{ color:#fff;}
-.footer .panel .content p span{ color:#062c5b; font-weight:bold; font-size:12px;}
-.footer .quickcontact{ width:270px; float:right;}
-
-.copyright-wrap{ background:#fff; overflow:hidden; padding-top:30px; padding-bottom:30px;}
-.copyright{ width:960px; margin:0 auto;}
-.copyright .content{ text-align:center;}
-.copyright .content a{ text-decoration:none; color:#1491c1;}
-.copyright .content a:hover{color:#062c5b;}
-.copyright .content a.active{color:#062c5b;}
+/* ------------------------------
+   Global Styles
+------------------------------ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Droid Serif', serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
 }
 
-header {
-    font-weight: bold;
+a {
+    color: var(--accent-color);
+    text-decoration: none;
 }
 
-#roblox-game {
-    background-color: #f7f7f7;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+a:hover {
+    color: var(--accent-hover);
 }
 
-#robloxGameContainer {
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ------------------------------
+   Navbar
+------------------------------ */
+/* Navbar background as castle */
+.navbar {
     width: 100%;
-    height: 500px;
+    background-image: url('../images/Castle.png'); /* castle image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 200px; /* adjust based on image height */
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+/* Navbar container for flex layout */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* aligns links to bottom of navbar */
+    height: 100%;
+    padding: 0 30px;
+}
+
+/* Logo positioned “over” the castle */
+.nav-logo img {
+    height: 200px; /* make it slightly taller than navbar padding */
+    margin-bottom: -40px; /* negative margin to make it overlap the castle edge */
+}
+
+/* Navbar links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.nav-links li a:hover {
+    color: #ffd700; /* hover highlight */
+}
+
+/* ------------------------------
+   Hero Section
+------------------------------ */
+.hero {
+    background-color: var(--bg-section);
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 2px 8px var(--box-shadow-light);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+/* ------------------------------
+   Featured Games Section
+------------------------------ */
+
+/* ==============================
+   Stacked Full-Width Games
+============================== */
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.game-card p {
+    padding: 0 10px 15px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+/* ==============================
+   Full-Size Scratch Game Embeds
+============================== */
+
+.game-card {
+    width: 95vw;               /* nearly full screen */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: var(--bg-section);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px var(--box-shadow-light);
+}
+
+.game-card h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* FORCE Scratch iframe size */
+.game-card iframe {
+    width: 100% !important;
+    height: 700px !important;
+    max-width: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+.footer-wrap {
+    background-color: var(--bg-section);
+    border-top: 1px solid var(--border-color);
+    padding: 25px 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ------------------------------
+   Video Gallery
+------------------------------ */
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: var(--bg-section);
+}
+
+.video-item {
+    flex: 1 1 300px; /* responsive width */
+    max-width: 560px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px var(--box-shadow-light);
+    transition: transform 0.2s;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 315px;
+    display: block;
+}
+
+/* Extra styles for video gallery */
+#videoGallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.video-item iframe {
+    width: 300px;
+    height: 170px;
+    border-radius: 10px;
+}
+/* ==============================
+   HOME PAGE ONLY STYLES
+   (Does NOT affect games/videos)
+============================== */
+
+body.home .hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("../images/bg3.jpg") center / cover no-repeat;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+body.home .hero h1 {
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Intro section replaces normal games layout on home */
+body.home .intro-section {
+    background-color: var(--bg-section);
+    padding: 100px 25px;
+    display: block;
+}
+
+/* Text container */
+body.home .intro-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+/* Paragraph spacing */
+body.home .intro-text p {
+    margin-bottom: 1.8em;
+}
+
+/* Encouraging highlight line */
+body.home .encouragement {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body.home .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    body.home .intro-text {
+        font-size: 1.1rem;
+    }
+}
+/* ------------------------------
+   Responsive Media Queries
+------------------------------ */
+@media (max-width: 900px) {
+    .games {
+        gap: 20px;
+    }
+
+    .game-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .game-card {
+        width: 100%;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-logo img {
+        margin-bottom: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
 }
