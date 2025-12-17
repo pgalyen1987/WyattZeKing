@@ -10,13 +10,20 @@
     </head>
 <body class="home">
     <!-- Navigation -->
-    <header id="navigation"></header>
+    <div id="navigation"></div>
+    <script>
+        $(document).ready(function () {
+            $('#navigation').load('navbar.html');
+        });
+    </script>
 
     <!-- Hero Section -->
     <main>
         <section class="hero">
-            <h1>Wyatt Ze King</h1>
-            <h2 class="subtitle">Artist • Creator • Game Developer</h2>
+            <div class="hero-content">
+                <h1>Wyatt Ze King</h1>
+                <h2>Artist • Creator • Game Developer</h2>
+            </div>
         </section>
 
         <!-- About / Featured Section -->

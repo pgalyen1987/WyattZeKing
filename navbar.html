@@ -5,6 +5,9 @@
             <img src="images/WyattZeKing.png" alt="Wyatt Ze King Logo">
         </a>
 
+        <!-- Hamburger Button for Mobile -->
+        <button class="nav-toggle">&#9776;</button>
+
         <!-- Navigation Links -->
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -14,3 +17,12 @@
         </ul>
     </div>
 </nav>
+
+<script>
+    $(document).ready(function () {
+        // Toggle mobile menu
+        $(document).on("click", ".nav-toggle", function () {
+            $(".nav-links").toggleClass("open");
+        });
+    });
+</script>
