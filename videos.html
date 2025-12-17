@@ -1,77 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <div id="common-head"></div>
-        <script src="js/jquery-3.7.1.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('#common-head').load('header.html');
-            });
-        </script>
-    </head>
-<body>
+<head>
+    <!-- Common Head -->
+    <div id="common-head"></div>
 
-<!-- Navbar -->
-<script src="js/jquery-3.7.1.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#navigation').load('navbar.html');
-    });
-</script>
-<div id="navigation"></div>
-
-<!-- Page Content -->
-<div class="rightcol">
-    <div class="page-content">
-
-        <div class="hero">
-            <h1>Latest Videos from WyattZeKing</h1>
-            <p>These videos update automatically! <a href="https://www.youtube.com/@stranger13-silent" target="_blank">Subscribe on YouTube</a></p>
-        </div>
-
-        <div id="videoGallery">
-            <!-- Videos will load here -->
-        </div>
-
-        <p style="text-align:center; margin-top:20px;">
-            More videos at <a href="https://www.youtube.com/@stranger13-silent" target="_blank">WyattZeKings YouTube channel</a>!
-        </p>
-
-    </div><!-- .page-content -->
-</div><!-- .rightcol -->
-
-<script>
-    const apiKey     = "AIzaSyBWHAY0u--3CU13q86FV_f5qOtKyGLdc-w";
-    const channelId  = "UC6vqZtxFTCIlDXIZRWs4xIQ"; // Your confirmed channel ID
-    const maxResults = 5;
-
-    // Fetch latest videos from channel
-    fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`)
-    .then(response => response.json())
-    .then(data => {
-        const gallery = document.getElementById("videoGallery");
-        gallery.innerHTML = ""; // Clear any existing content
-
-        data.items.forEach(item => {
-            if (item.id.videoId) {
-                const div = document.createElement("div");
-                div.className = "video-item";
-                div.innerHTML = `
-                    <iframe
-                        src="https://www.youtube.com/embed/${item.id.videoId}"
-                        title="${item.snippet.title}"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                    <p style="text-align:center; max-width:300px; font-size:0.9rem; margin:5px auto;">${item.snippet.title}</p>
-                `;
-                gallery.appendChild(div);
-            }
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#common-head').load('header.html');
         });
-    })
-    .catch(err => console.error("Error fetching YouTube videos:", err));
-</script>
+    </script>
+</head>
 
+<body>
+    <!-- Navigation -->
+    <header id="navigation"></header>
+    <script>
+        $(document).ready(function () {
+            $('#navigation').load('navbar.html');
+        });
+    </script>
+
+    <!-- Page Content -->
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <h1>Latest Videos</h1>
+            <h2 class="subtitle">
+                New videos appear here automatically.
+                <a href="https://www.youtube.com/@stranger13-silent" target="_blank">
+                    Subscribe on YouTube
+                </a>
+            </h2>
+        </section>
+
+        <!-- Video Gallery -->
+        <section class="media-gallery" id="videoGallery">
+            <!-- Videos injected here -->
+        </section>
+
+        <!-- More Videos -->
+        <div class="more-games" style="text-align:center; margin: 60px 0;">
+            <a
+                href="https://www.youtube.com/@stranger13-silent"
+                target="_blank"
+                class="btn-primary"
+            >
+                View All Videos on YouTube
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-wrap">
+        <p>&copy; 2025 Wyatt Ze King. All rights reserved.</p>
+    </footer>
+
+    <!-- YouTube Loader -->
+    <script>
+        const apiKey     = "AIzaSyBWHAY0u--3CU13q86FV_f5qOtKyGLdc-w";
+        const channelId  = "UC6vqZtxFTCIlDXIZRWs4xIQ";
+        const maxResults = 6;
+
+        fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`)
+            .then(response => response.json())
+            .then(data => {
+                const gallery = document.getElementById("videoGallery");
+                gallery.innerHTML = "";
+
+                data.items.forEach(item => {
+                    if (!item.id.videoId) return;
+
+                    const card = document.createElement("article");
+                    card.className = "media-card";
+
+                    card.innerHTML = `
+                        <h3>${item.snippet.title}</h3>
+                        <iframe
+                            src="https://www.youtube.com/embed/${item.id.videoId}"
+                            title="${item.snippet.title}"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    `;
+
+                    gallery.appendChild(card);
+                });
+            })
+            .catch(err => console.error("Error loading videos:", err));
+    </script>
 </body>
 </html>

@@ -1,144 +1,74 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <div id="common-head"></div>
-        <script src="js/jquery-3.7.1.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('#common-head').load('header.html');
-            });
-        </script>
-    </head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div id="common-head"></div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#common-head').load('header.html');
+        });
+    </script>
+</head>
 
-    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+<body>
+    <!-- Navigation -->
+    <header id="navigation"></header>
     <script>
         $(document).ready(function () {
             $('#navigation').load('navbar.html');
-        });</script>
+        });
+    </script>
 
-    <div id="navigation"></div>
+    <!-- Page Hero -->
+    <main>
+        <section class="hero">
+            <h1>Art Gallery</h1>
+            <h2 class="subtitle">Original Artwork & Character Designs</h2>
+        </section>
 
-    <div class="wrap">
-        <div class="leftcol">
-            <div class="search">
-                <div class="title">
-                    <h1>Site Search</h1>
-                    <div class="search-input"><input name="" type="text" class="input-style" /></div>
-                    <div class="search-btn"><img src="images/search-btn.jpg" alt="search" /></div>
+        <!-- Art Gallery -->
+        <section class="media-gallery">
+
+            <!-- Artwork Card -->
+            <div class="media-card">
+                <h3>Ban Ban OC</h3>
+                <img
+                    src="images/ban ban oc.png"
+                    alt="Original character artwork named Ban Ban"
+                    style="width:100%; height:auto;"
+                />
+            </div>
+
+            <div class="media-card">
+                <h3>What the Skibidi Toilet</h3>
+                <img
+                    src="images/skibidi.gif"
+                    alt="Original character artwork named Ban Ban"
+                    style="width:100%; height:auto;"
+                />
+            </div>
+
+
+            <!-- Placeholder for future art -->
+            <div class="media-card">
+                <h3>More Artwork Coming Soon</h3>
+                <div style="
+                    padding: 80px 20px;
+                    text-align: center;
+                    font-size: 1.2rem;
+                    color: #666;
+                ">
+                    New drawings and designs will be added here as Wyatt
+                    continues to explore and grow his creativity.
                 </div>
             </div>
 
-            <div class="block">
-                <div class="panel">
-                    <div class="title">
-                        <h1></h1>
-                    </div>
-                    <div class="content">
+        </section>
+    </main>
 
-                    </div>
-                </div>
-            </div>
-
-            <div class="block2">
-                <div class="title"><h1></h1></div>
-                <div class="panel">
-
-                    <di
-                </div>
-            </div>
-            <div class="panel">
-
-                <div class="content">
-
-                </div>
-            </div>
-            <div class="panel bor-bottm-non">
-
-                <div class="content">
-
-                </div>
-            </div>
-        </div>
-    </div><!---leftcol--->
-
-
-
-    <div class="rightcol">
-        <div class="page-content">
-            <div class="panel mar-bottom">
-                <div class="title">
-                    <h1>ban ban oc</h1>
-                    <div class="ban ban oc"><img src="images/ban ban oc.png" alt= /></div>
-                    <img
-  class="fit-picture"
-  src="images/ban ban oc.png "
-  alt="ban ban oc" />
-
-                    <br />
-                    <h2></h2>
-                    <br />
-                    <h2></h2>
-                </div>
-                <div class="panel">
-                    <div class="title">
-                    </div>
-                    <div class="content">
-
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="clearing"></div>
-        </div><!---page--->
-    </div><!---Rightcol--->
-    </div>
-    <div class="footer-wrap">
-        <div class="footer">
-            <div class="bolg">
-                <div class="title">
-                    <h1>From Our Blog</h1>
-                </div>
-                <div class="panel mar-right115">
-                    <div class="content">
-
-                    </div>
-                </div>
-
-                <div class="panel">
-                    <div class="content">
-                        <ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="quickcontact">
-                <div class="title">
-                    <h1>Quick Contact</h1>
-                </div>
-                <div class="panel">
-                    <div class="content">
-                        </ul>
-                        <p>
-
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!---footer--->
-    <div class="copyright-wrap">
-        <div class="copyright">
-            <div class="content">
-                <p>
-                    � 2012 All Rights Reserved  |  Privacy Policy
-                    Designed by :<a href=" www.alltemplateneeds.com." class="active"> www.alltemplateneeds.com.</a>
-                    Images From:<a href=" www.photorack.net"> www.photorack.net</a>
-                </p>
-            </div>
-        </div>
-    </div><!---copyright-wrap--->
+    <!-- Footer -->
+    <footer class="footer-wrap">
+        <p>&copy; 2025 Wyatt Ze King. All rights reserved.</p>
+    </footer>
 </body>
 </html>
