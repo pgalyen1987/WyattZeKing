@@ -262,40 +262,54 @@ body.home .encouragement {
 ------------------------------ */
 @media (max-width: 600px) {
 
-    /* Hamburger toggle */
+    .nav-container {
+        flex-direction: row; /* keep logo and toggle in one row */
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1000; /* keep it above other content */
+    }
+
     .nav-toggle {
         display: block;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        z-index: 100;
+        font-size: 2.2rem;
+        color: #fff;
+        cursor: pointer;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        z-index: 1001;
     }
 
-    /* Navbar container stacked */
-    .nav-container {
+    .nav-links {
+        display: none;
+        position: absolute;      /* overlay on top */
+        top: 100%;               /* just below navbar */
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.85);
         flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        height: auto; /* allow navbar to adjust height */
-        padding: 10px 15px;
-        position: relative;
+        gap: 12px;
+        text-align: center;
+        padding: 15px 0;
+        border-radius: 0 0 12px 12px;
+        z-index: 999;            /* above everything else */
     }
 
-    /* Navbar background image keeps aspect ratio */
-    .navbar {
-        height: 120px;          /* adjust for smaller screens */
-        background-size: cover; /* maintains aspect ratio */
-        background-position: center 90%;
+    .nav-links.open {
+        display: flex;
     }
 
-    /* Logo smaller, centered vertically */
+    .nav-links a {
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
     .nav-logo img {
-        height: 60px;      /* smaller logo */
-        width: auto;
+        position: absolute;
+        height: 90%; /* fill navbar height */
+        width: auto;  /* maintain aspect ratio */
         object-fit: contain;
-        position: relative;
-        bottom: 0;         /* keep aligned with navbar bottom */
-        margin-bottom: 5px;
+        bottom: 2%;
+        left: 15%;
     }
 
     /* Navigation links stacked and collapsible */
