@@ -305,7 +305,7 @@ body.home .encouragement {
 
     .nav-logo img {
         position: absolute;
-        height: 90%; /* fill navbar height */
+        height: 50%; /* fill navbar height */
         width: auto;  /* maintain aspect ratio */
         object-fit: contain;
         bottom: 2%;
@@ -361,6 +361,37 @@ body.home .encouragement {
 
     /* Hero content overlay */
     .hero-content {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 320px;
+    }
+
+    body.home .hero {
+        min-height: 30vh;             /* adjust height for mobile */
+        background-size: contain;     /* maintains full image aspect ratio */
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 40px 10px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Hero text responsive */
+    body.home .hero h1 {
+        font-size: 2rem;
+    }
+
+    body.home .hero p {
+        font-size: 0.95rem;
+    }
+
+    /* Hero content overlay */
+    body.home .hero-content {
         top: 10%;
         left: 50%;
         transform: translateX(-50%);
