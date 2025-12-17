@@ -50,6 +50,19 @@ a:hover {
 }
 
 /* ------------------------------
+   Hamburger Button
+------------------------------ */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* ------------------------------
    Navbar
 ------------------------------ */
 .navbar {
@@ -221,6 +234,42 @@ body.home .encouragement {
    Mobile Navigation
 ------------------------------ */
 @media (max-width: 600px) {
+
+    .nav-container {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        background: rgba(0,0,0,0.65);
+        margin-top: 15px;
+        padding: 15px 0;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 12px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    /* When menu is open */
+    .nav-links.open {
+        display: flex;
+        flex-direction: column;
+    }
 
     .media-card iframe {
         height: 56vw;      /* 16:9 ratio */
