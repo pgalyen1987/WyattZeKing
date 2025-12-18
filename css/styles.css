@@ -405,6 +405,7 @@ body.home .encouragement {
         top: 10%;
         left: 50%;
         transform: translateX(-50%);
+        height: 100%;
     }
 
     body.home .hero {
