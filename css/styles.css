@@ -385,7 +385,7 @@ body.home .encouragement {
         justify-content: center;
         align-items: center;
         text-align: center;
-        border-top: 1px solid rgba(0,0,0,0.3);
+        border-top: 5px solid rgba(0,0,0,0.3);
     }
 
     /* Hero text responsive */
@@ -453,5 +453,17 @@ body.home .encouragement {
         height: 100vh;
         max-height: 100vh;
         border-radius: 0;
+    }
+
+    .fullscreen-btn {
+        display: inline-block;
+        margin: 15px 30px;
+        padding: 20px 20px;
+        font-size: 1rem;
+        background: #ffab19;
+        color: #000;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
     }
 }
