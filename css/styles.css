@@ -388,6 +388,7 @@ body.home .encouragement {
         align-items: center;
         text-align: center;
         border-top: 5px solid rgba(0,0,0,0.3);
+        width: 100%;
     }
 
     /* Hero text responsive */
@@ -419,6 +420,7 @@ body.home .encouragement {
         justify-content: center;
         align-items: center;
         text-align: center;
+        width: 100%;
     }
 
     /* Hero text responsive */
