@@ -405,8 +405,6 @@ body.home .encouragement {
         top: 10%;
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
-        max-width: 420px;
     }
 
     body.home .hero {
@@ -426,7 +424,7 @@ body.home .encouragement {
     /* Hero text responsive */
     body.home .hero h1 {
         font-size: 2rem;
-        padding: 0;
+        padding: 1rem;
     }
 
     body.home .hero h2 {
