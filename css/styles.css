@@ -305,6 +305,7 @@ body.home .encouragement {
         align-items: center;
         justify-content: space-between;
         position: relative;
+        border-bottom: 5px #000;
         z-index: 1000; /* keep it above other content */
     }
 
@@ -376,7 +377,7 @@ body.home .encouragement {
 
     /* Hero section keeps aspect ratio */
     .hero {
-        min-height: 30vh;             /* adjust height for mobile */
+        min-height: 20vh;             /* adjust height for mobile */
         background-size: contain;     /* maintains full image aspect ratio */
         background-position: center;
         background-repeat: no-repeat;
@@ -423,7 +424,6 @@ body.home .encouragement {
     /* Hero text responsive */
     body.home .hero h1 {
         font-size: 2rem;
-        margin-bottom: 2%;
     }
 
     body.home .hero h2 {
@@ -449,7 +449,7 @@ body.home .encouragement {
 
     /* Media cards responsive */
     .media-card iframe {
-        height: 56vw;      /* 16:9 ratio for small screens */
+        height: 65vw;      /* 16:9 ratio for small screens */
         min-height: 200px;
     }
 
