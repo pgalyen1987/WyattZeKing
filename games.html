@@ -57,19 +57,23 @@
         const games = [
             {
                 title: "Mr Happy Mean Level Demo",
-                embed: "https://scratch.mit.edu/projects/1071230498/embed"
+                embed: "https://scratch.mit.edu/projects/1071230498/embed",
+                id: 1071230498
             },
             {
                 title: "Saving Time for Me",
-                embed: "https://scratch.mit.edu/projects/1217453599/embed"
+                embed: "https://scratch.mit.edu/projects/1217453599/embed",
+                id: 1217453599
             },
             {
                 title: "Make A Soup",
-                embed: "https://scratch.mit.edu/projects/1018008491/embed"
+                embed: "https://scratch.mit.edu/projects/1018008491/embed",
+                id: 1018008491
             },
             {
                 title: "The Biglizard 2: The Dungeon Demo",
-                embed: "https://scratch.mit.edu/projects/1042991539/embed"
+                embed: "https://scratch.mit.edu/projects/1042991539/embed",
+                id: 1042991539
             }
         ];
 
@@ -81,16 +85,34 @@
 
             card.innerHTML = `
                 <h3>${game.title}</h3>
-                <iframe
-                    src="${game.embed}"
-                    allow="fullscreen"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
+                <div class="scratch-wrapper">
+                    <iframe
+                        src="${game.embed}"
+                        allow="fullscreen"
+                        allowfullscreen
+                        loading="lazy"
+                        allowtransparency="true"
+                        scrolling="no">
+                    </iframe>
+                </div>
+
+                <button class="fullscreen-btn"
+                    onclick="openScratchFullscreen('${game.id}')">
+                    Full Screen >
+                </button>
             `;
 
             container.appendChild(card);
         });
+    </script>
+
+<script>
+    function openScratchFullscreen(id) {
+        window.open(
+            `https://scratch.mit.edu/projects/${id}/fullscreen/`,
+            "_blank"
+        );
+    }
     </script>
 </body>
 </html>
