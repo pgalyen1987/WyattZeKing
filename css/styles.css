@@ -380,7 +380,7 @@ body.home .encouragement {
         min-height: 20vh;             /* adjust height for mobile */
         background-size: contain;     /* maintains full image aspect ratio */
         background-position: center;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         padding: 40px 10px;
         position: relative;
         display: flex;
